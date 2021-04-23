@@ -1,0 +1,39 @@
+#include <iostream>
+#include <sstream>
+#include <cmath>
+#include <cstdio>
+#include <iomanip>
+#include <stack> //pilha
+#include <queue> //fila
+#include <functional>
+#include <tr1/functional> //hash
+#include <vector>
+#include <cstring>
+#include <string>
+#include <stdlib.h>
+#include <bits/stdc++.h>
+#include <unordered_map>
+#include <map>
+#include <set>
+#include <algorithm>
+#include <stdio.h>
+using namespace std;
+
+int main()
+{
+    int ct;
+    cin >> ct;
+    int anterior = -1;
+    int posMenor = 0;
+    for (int i = 0; i < ct; i++)
+    {
+        int n;
+        cin >> n;
+        if (anterior > n && posMenor == 0)
+        {
+            posMenor = i + 1;
+        }
+        anterior = n;
+    }
+    cout << posMenor << endl;
+}

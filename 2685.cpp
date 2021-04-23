@@ -1,0 +1,44 @@
+#include <iostream>
+#include <sstream>
+#include <cmath>
+#include <cstdio>
+#include <iomanip>
+#include <stack> //pilha
+#include <queue> //fila
+#include <functional>
+#include <tr1/functional> //hash
+#include <vector>
+#include <cstring>
+#include <string>
+#include <stdlib.h>
+#include <bits/stdc++.h>
+#include <unordered_map>
+#include <map>
+#include <set>
+#include <algorithm>
+#include <stdio.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    while (cin >> n)
+    {
+        if ((n >= 0 && n < 90) || n == 360)
+        {
+            cout << "Bom Dia!!" << endl;
+        }
+        else if (n >= 90 && n < 180)
+        {
+            cout << "Boa Tarde!!" << endl;
+        }
+        else if (n >= 180 && n < 270)
+        {
+            cout << "Boa Noite!!" << endl;
+        }
+        else if (n >= 270 && n < 360)
+        {
+            cout << "De Madrugada!!" << endl;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+#include <iostream>
+#include <sstream>
+#include <cmath>
+#include <cstdio>
+#include <iomanip>
+#include <stack> //pilha
+#include <queue> //fila
+#include <functional>
+#include <tr1/functional> //hash
+#include <vector>
+#include <cstring>
+#include <string>
+#include <stdlib.h>
+#include <bits/stdc++.h>
+#include <unordered_map>
+#include <map>
+#include <set>
+#include <algorithm>
+#include <stdio.h>
+using namespace std;
+
+int main()
+{
+    int notas, posicoes;
+    while (cin >> notas)
+    {
+        vector<int> v;
+        cin >> posicoes;
+        for (int i = 0; i < notas; i++)
+        {
+            int n;
+            cin >> n;
+            v.push_back(n);
+        }
+        make_heap(v.rbegin(), v.rend());
+        sort_heap(v.rbegin(), v.rend());
+        for (int i = 0; i < posicoes; i++)
+        {
+            int n;
+            cin >> n;
+            cout << v[n - 1] << endl;
+        }
+    }
+}

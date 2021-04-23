@@ -1,0 +1,57 @@
+#include <iostream>
+#include <sstream>
+#include <cmath>
+#include <cstdio>
+#include <iomanip>
+#include <stack> //pilha
+#include <queue> //fila
+#include <functional>
+#include <tr1/functional> //hash
+#include <vector>
+#include <cstring>
+#include <string>
+#include <stdlib.h>
+#include <bits/stdc++.h>
+#include <unordered_map>
+#include <map>
+#include <set>
+#include <algorithm>
+#include <stdio.h>
+using namespace std;
+
+int main()
+{
+    int ct = 1;
+    while (ct != 0)
+    {
+        cin >> ct;
+        if (ct != 0)
+        {
+            int d = 0, e = 0;
+            string s = "NLSO";
+            for (int i = 0; i < ct; i++)
+            {
+                char c;
+                cin >> c;
+                if (c == 'D')
+                {
+                    d++;
+                }
+                else
+                {
+                    e++;
+                }
+            }
+            int p = (d - e) % 4;
+            if (p < 0)
+            {
+                cout << s[s.length() + p] << endl;
+            }
+            else
+            {
+                cout << s[p] << endl;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,46 @@
+#include <iostream>
+#include <sstream>
+#include <cmath>
+#include <cstdio>
+#include <iomanip>
+#include <stack> //pilha
+#include <queue> //fila
+#include <functional>
+#include <tr1/functional> //hash
+#include <vector>
+#include <cstring>
+#include <string>
+#include <stdlib.h>
+#include <bits/stdc++.h>
+#include <unordered_map>
+#include <map>
+#include <set>
+#include <algorithm>
+#include <stdio.h>
+using namespace std;
+
+int main()
+{
+    priority_queue<int> f;
+    int ct, lim;
+    cin >> ct >> lim;
+    for (int i = 0; i < ct; i++)
+    {
+        int n;
+        cin >> n;
+        f.push(n);
+    }
+    int contNum = lim;
+    int ultimo = -1;
+    for (int i = 0; i < lim; i++)
+    {
+        ultimo = f.top();
+        f.pop();
+    }
+    while (!f.empty() && f.top() == ultimo)
+    {
+        contNum++;
+        f.pop();
+    }
+    cout << contNum << endl;
+}
